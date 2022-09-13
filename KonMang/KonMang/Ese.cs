@@ -17,14 +17,15 @@ namespace KonMang
             this.punktide_Arv = punktide_Arv;
         }
 
-        public string info()
+        public string Info()
         {
             return nimetus;
         }
 
-        public int PuntkideArv()
+        public int PunktideArv()
         {
             return punktide_Arv;
         }
+
     }
 }

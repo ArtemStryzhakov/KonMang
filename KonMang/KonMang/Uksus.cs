@@ -8,7 +8,7 @@ namespace KonMang
 {
     interface Uksus
     {
-        int PuntkideArv();
-        string info();
+        int PunktideArv();
+        string Info();
     }
 }
