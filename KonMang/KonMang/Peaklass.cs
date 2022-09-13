@@ -92,8 +92,7 @@ namespace KonMang
             {
                 Console.WriteLine(winner.Info());
             }
-            Tegelane win = mang.Suurima
-                uga();
+            Tegelane win = mang.SuurimaPunktideArvuga();
             Console.WriteLine(win.Info());
             Console.WriteLine("Игрок имел следующие предметы:", Console.ForegroundColor = ConsoleColor.Yellow);
             win.väljastaEsemed();

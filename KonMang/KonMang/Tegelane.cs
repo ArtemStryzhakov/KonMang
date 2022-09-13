@@ -10,7 +10,7 @@ namespace KonMang
 {
     internal class Tegelane : Uksus, IComparable<Tegelane>
     {
-        double summary;
+        
         private string nimi;
         List<Ese> eseList = new List<Ese>();
 
@@ -28,6 +28,7 @@ namespace KonMang
 
         public string Info()
         {
+            double summary = 0;
             Console.WriteLine($"Nimi: {nimi}", Console.ForegroundColor = ConsoleColor.Green);
             Console.WriteLine("--------------------------", Console.ForegroundColor = ConsoleColor.White);
             foreach (string line in File.ReadLines(@"..\..\..\file.txt"))
@@ -36,7 +37,7 @@ namespace KonMang
                 summary += Double.Parse(row[1]);
                 Ese ese = new Ese(row[0], Int32.Parse(row[1]));
                 eseList.Add(ese);             
-                Console.WriteLine($"Nimetus: {row[0]}, Punktide arvu: {row[1]}", Console.ForegroundColor = ConsoleColor.White); 
+                Console.WriteLine($"Nimetus: {row[0]}, Punktide arvu: {row[1]}", Console.ForegroundColor = ConsoleColor.White);
             }
             Console.WriteLine($"Esemete arvu: {eseList.Count}, Summa: {summary}\n");
             return $"{nimi} info:\n Esemete arv: {eseList.Count}\n Punktide arv: {PunktideArv()}\n";
