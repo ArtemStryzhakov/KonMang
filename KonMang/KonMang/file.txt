@@ -1,19 +1,19 @@
 ﻿Standard Fairy Armor;50
-Magic pants; 100
+Magic pants;100
 Anti-lightning brooch;250
 Magic wand; 1000
 Ring of Great Power;750
-Belt bag; 150
-Big magic bag; 800
+Belt bag;150
+Big magic bag;800
 Boots of Speed;500
-Wallet; 750
+Wallet;750
 Ring of Very High Dexterity;900
 Small Iron Magic Shield;100
 Heavily Cursed Gloves;250
 Normal axe;50
 Potion of Fatigue;350
 Potion of Wisdom;300
-Potion of healing small wounds; 200
+Potion of healing small wounds;200
 Gloves of Very High Dexterity;600
-Anti-cold pendant; 400
+Anti-cold pendant;400
 Anti-fire jewelry;650

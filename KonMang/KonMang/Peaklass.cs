@@ -8,7 +8,7 @@ namespace KonMang
 {
     internal static class Peaklass
     {
-        static string[] names = { "Artem", "Genadij", "Geralt", "Yennefer", "Triss", "Ciri" };
+        static List<string> names = new List<string>{ };
         public static Random rnd = new Random();
         public static List<Ese> LoeEsemed()
         {
@@ -48,21 +48,14 @@ namespace KonMang
             }
         }
 
-        static string getName()
-        {           
-            return names[rnd.Next(names.Length)];
-        }
-
-        static Tegelane[] populatePlayers(int plrCount)
+        static Tegelane[] asustadaMangijaid(int plrCount)
         {
-            if (plrCount < 4) throw new Exception();
+            if (plrCount < names.Count) throw new Exception();
             Tegelane[] plrs = new Tegelane[plrCount];
-            for (int i = 0; i < plrCount; i++)
+            for (int i = 0; i < names.Count; i++)
             {
-                Tegelane plr = new Tegelane(getName());
+                Tegelane plr = new Tegelane(names[i]);
                 plrs[i] = plr;
-                int index = Array.IndexOf(names, plr);
-                names = names.Where((e, u) => u != index).ToArray();
             }
 
             return giveOutItems(plrs);
@@ -74,6 +67,7 @@ namespace KonMang
             if (itemList.Count <= 0) throw new ArgumentOutOfRangeException();
             foreach (Tegelane plr in plrs)
             {
+                if(plr==null) continue;
                 Shuffle(itemList);
                 int amount = rnd.Next(2, 10);
                 for (int i = 0; i < amount; i++)
@@ -86,7 +80,16 @@ namespace KonMang
 
         static public void PlayGame(int plrCount)
         {
-            Tegelane[] plrs = populatePlayers(plrCount);
+            Console.Write("Kui palju mängijad mängivad: ");
+            int count = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < count; i++)
+            {
+                Console.Write($"Kirjutage {i + 1}-ne mängija nimi: ");
+                string name = Console.ReadLine();
+                names.Add(name);
+            }
+
+            Tegelane[] plrs = asustadaMangijaid(plrCount);
             Mang mang = new Mang(plrs);
             foreach (Tegelane winner in mang.SuurimaEsemeteArvuga())
             {
@@ -94,9 +97,8 @@ namespace KonMang
             }
             Tegelane win = mang.SuurimaPunktideArvuga();
             Console.WriteLine(win.Info());
-            Console.WriteLine("Игрок имел следующие предметы:", Console.ForegroundColor = ConsoleColor.Yellow);
+            Console.WriteLine("Игрок имел следующие предметы:\n", Console.ForegroundColor = ConsoleColor.Yellow);
             win.väljastaEsemed();
-
         }
     }
 }

@@ -8,19 +8,26 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\striz\\.nuget\\packages\\": {}
+    "C:\\Users\\opilane\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\striz\\Source\\Repos\\KonMang\\KonMang\\KonMang\\KonMang.csproj",
+      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\Artem Stryzhakov TARpv20\\KonMang\\KonMang\\KonMang\\KonMang.csproj",
       "projectName": "KonMang",
-      "projectPath": "C:\\Users\\striz\\Source\\Repos\\KonMang\\KonMang\\KonMang\\KonMang.csproj",
-      "packagesPath": "C:\\Users\\striz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\striz\\Source\\Repos\\KonMang\\KonMang\\KonMang\\obj\\",
+      "projectPath": "C:\\Users\\opilane\\source\\repos\\Artem Stryzhakov TARpv20\\KonMang\\KonMang\\KonMang\\KonMang.csproj",
+      "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\opilane\\source\\repos\\Artem Stryzhakov TARpv20\\KonMang\\KonMang\\KonMang\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\striz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +35,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

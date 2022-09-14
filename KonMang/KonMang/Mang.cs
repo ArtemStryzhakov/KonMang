@@ -39,6 +39,7 @@ namespace KonMang
             Tegelane winner = players[0];
             foreach (Tegelane plr in players)
             {
+                if (plr == null) continue;
                 int arv = plr.PunktideArv();
                 if (arv > highest) { highest = arv; winner = plr; }
             }

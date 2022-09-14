@@ -25,21 +25,10 @@ namespace KonMang
             return this.eseList.Count - other.ItemCount();
         }
         public int ItemCount() { return eseList.Count; }
-
+        
         public string Info()
         {
-            double summary = 0;
-            Console.WriteLine($"Nimi: {nimi}", Console.ForegroundColor = ConsoleColor.Green);
-            Console.WriteLine("--------------------------", Console.ForegroundColor = ConsoleColor.White);
-            foreach (string line in File.ReadLines(@"..\..\..\file.txt"))
-            {
-                string[] row = line.Split(';');
-                summary += Double.Parse(row[1]);
-                Ese ese = new Ese(row[0], Int32.Parse(row[1]));
-                eseList.Add(ese);             
-                Console.WriteLine($"Nimetus: {row[0]}, Punktide arvu: {row[1]}", Console.ForegroundColor = ConsoleColor.White);
-            }
-            Console.WriteLine($"Esemete arvu: {eseList.Count}, Summa: {summary}\n");
+            //väljastaEsemed();
             return $"{nimi} info:\n Esemete arv: {eseList.Count}\n Punktide arv: {PunktideArv()}\n";
         }
 
